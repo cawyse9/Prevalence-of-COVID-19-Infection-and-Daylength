@@ -18,7 +18,8 @@ The objective of this study is to investigate if the prevalence of COVID19 infec
 ## Data Analysis
 Data on COVID19 cases, tests and deaths in Europe over the course of the pandemic in 2020 were matched with data on daylength and outdoor temperature for each week and location. Linear regression analysis was applied to assess the association between COVID19 infection and daylength, while adjusting for potential confounding factors (population, tests, outdoor temperature and economic status). 
 
-Details of the analysis and results are [here]()
+Details of the analysis and results are [here](https://github.com/cawyse9/Prevalence-of-COVID-19-Infection-and-Daylength/blob/main/Python%20Code/COVID_daylength_v1.pdf)  
+
 Python notebook is [here](https://github.com/cawyse9/Prevalence-of-COVID-19-Infection-and-Daylength/blob/main/Python%20Code/project211220.ipynb)
 
 ## Conclusion
