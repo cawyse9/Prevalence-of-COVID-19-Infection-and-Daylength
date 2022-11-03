@@ -25,4 +25,4 @@ Python notebook is [here](https://github.com/cawyse9/Prevalence-of-COVID-19-Infe
 There was some evidence for a negative linear relationship between COVID19 case numbers and daylength, but it was not possible to eliminate strong collinearity with outdoor temperature. The results of this study support an association between COVID19 and daylength, that could be mediated partly through the effects of outdoor temperature.
 
 ## Acknowledgements
-This project was submitted as part of the coursework required for the module, "Programming in Python" for an a MSc (Data Analytics) course at UCD in 2022.
+This project was submitted as part of the coursework required for the module, "Programming in Python" for an a MSc (Data Analytics) course at UCD in 2020.
