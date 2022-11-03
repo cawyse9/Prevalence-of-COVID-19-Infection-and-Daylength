@@ -13,26 +13,13 @@ There is increasing evidence that the capacity of the immune system to defend ag
 ##	Objective 
 The objective of this study is to investigate if the prevalence of COVID19 infection during the 2020 pandemic was associated with daylength, independent of confounding factors such as temperature, testing, population and economic status.
 
-## Methods
-### Data Import and Processing
-The data on EU incidence of COVID-19 were checked to confirm csv format, and then processed to generate a single dataset relating cases, tests and deaths per week to changes in outdoor temperature and latitude in European Countries affected by COVID19.  Missing data were detected by searching for a panel of possibilities including 'NA', 'NULL', punctuation mark, and re-coded as missing values.
+## Data Analysis
+Data on COVID19 cases, tests and deaths in Europe over the course of the pandemic in 2020 were matched with data on daylength and outdoor temperature for each week and location. Linear regression analysis was applied to assess the association between COVID19 infection and daylength, while adjusting for potential confounding factors (population, tests, outdoor temperature and economic status). 
 
-Unemployment and income status were used as proxy measures of the economic status of each country.  Data on latitude, daylength and outdoor temperature were acquired from information provided by the Global Monitoring Division of the US Government National Oceanic and Atmospheric Administration.  The date recorded for case numbers and deaths, and for environmental data was standardised across all the datasets to average numbers per week.  The unit of time used in all further analysis was week number during 2020, ranging from 1-42.  The variable “income group” and “country code” were recoded as categorical variables, with 5 and 42 levels, respectively.
+Details of the analysis and results are [here]()
+Python notebook is [here]()
 
-The codes used to indicate country were standardised across datasets to three-digit (iso3 format.  At this point, it was possible to merge all data with reference to (i) country name and (ii) week number to yield a final table of COVID19 cases and deaths, by country, week and environmental factors (daylength, latitude)
+## Conclusion
+There was some evidence for a negative linear relationship between COVID19 case numbers and daylength, but it was not possible to eliminate strong collinearity with outdoor temperature. The results of this study support an association between COVID19 and daylength, that could be mediated partly through the effects of outdoor temperature.
 
-All analyses were implemented using Python 3.8 programming language, using pandas,
-Matplotlib, seaborn, linearmodels, and statsmodels libraries.
-
-### Outcome Variable 
-It was elected to confine the analyses to times of evidence of ongoing exposure to COVID19, to minimise the modulation of the outcome variable by non-environmental factors linked to disease exposure.  Ongoing exposure was defined as >1 death per week.  The effects of environmental factors such as daylength are more easily assessed by investigating periods of active infection.  In other words, susceptibility to infection can only be assessed while the disease is spreading.  There are no data available on social and travel restrictions in this study, so it was not possible to derive a more accurate measure of the possibility of exposure to SARS-CoV-2. 
-
-### Linear Modelling
-Linear regression models were applied to investigate the association between predictor variables and the study outcome (COVID19 cases).  Ordinary least squares linear regression models were applied as follows: 
-yi = αi +βxi + ϵi
-where y¬i is an outcome variable, and β and ϵi are regression coefficients and error terms, respectively.  Mixed models that incorporated time and country as random effects were also  applied:
-yit = αi + γt + β′xit + ϵit
-where αi is the country effect and γi is the time effect, β contains the variables of interest, temperature, etc, αi are country-specific components and ϵit are errors that are independent of αi and the covariates xit.  This model allowed for the autocorrelation caused by inclusion of the week number variable in the model (time entity) and for the non-independence induced by including data from multiple countries (entity).
-Linearity, equal variance and normality of residuals were investigated to ensure that the data did not violate the assumptions of linear regression.  Data are presented as mean and sd, or median and interquartile range, as appropriate.  Statistical significance was accepted at p<0.05.
-
-
+## 
